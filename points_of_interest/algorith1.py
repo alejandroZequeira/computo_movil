@@ -8,7 +8,7 @@ def timeDiference(p1,p2):
     fecha2 = datetime.fromisoformat(p2["ts"].replace("Z", "+00:00"))
     diferencia = fecha2 - fecha1
     diferencia_en_horas = diferencia.total_seconds() / 3600
-  #  print(diferencia_en_horas)
+    print(diferencia)
     return abs(diferencia_en_horas)
 
 def sumar_Lon_lat(p,Rmin,Rmax,parameter):
@@ -37,6 +37,7 @@ def trayectoria(points,Od,Ot):
                         "at":points[i]["ts"],
                         "dt":points[j]["ts"]
                            }
+                    print(point)
                     ruta.append(point)
                 i=j
                 break

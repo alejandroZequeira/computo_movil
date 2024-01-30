@@ -15,6 +15,7 @@ def formatear(data):
 
 data=formatear(datos)
 print(data[0]["ts"])
+print(len(data))
 
 rutas=algorith1.trayectoria(data,100,5/60)
 print(rutas[0])
